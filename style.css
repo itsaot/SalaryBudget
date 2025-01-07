@@ -5,9 +5,14 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #333;
-    min-height: 100vh; /* Ensure body takes full height */
     display: flex;
-    flex-direction: column; /* Allow footer to sit at the bottom */
+    flex-direction: column; /* Ensure the footer stays at the bottom */
+    min-height: 100vh; /* Ensure the body takes the full height */
+}
+
+/* Adjust body to make space for the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust this value to the height of your navbar */
 }
 
 /* Navigation Styles */
@@ -39,11 +44,6 @@ nav ul li a:hover {
     background-color: #000; /* Background turns black */
 }
 
-/* Adjust the body content to accommodate the fixed navbar */
-body {
-    padding-top: 70px; /* Create space for the fixed navbar */
-}
-
 /* Navbar Logo */
 nav .logo img {
     height: 50px;
@@ -59,6 +59,11 @@ nav ul {
 
 nav ul li {
     display: inline;
+}
+
+/* Adjust the body content to accommodate the fixed navbar */
+body {
+    padding-top: 70px; /* Create space for the fixed navbar */
 }
 
 /* Header styles */
@@ -256,17 +261,6 @@ body {
 
 footer {
     margin-top: auto; /* Ensure footer is pushed to the bottom */
-}
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    min-height: 100vh; /* Ensure body takes full height */
-    display: flex;
-    flex-direction: column; /* Allow footer to sit at the bottom */
 }
 
 /* Container for form */
