@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Payslip Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include JsBarcode Library -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+</head>
+<body>
+     <!-- Navbar -->
+     <nav>
+        <div class="logo">
+            <img src="Money Coin Bag Icon PNG & SVG Design For T-Shirts.jpg" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="genslip.html">Generate Payslip</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>How the Amounts are Calculated</h2>
+        <p>The payslip calculations include monthly deductions for UIF (Unemployment Insurance Fund), Pension Fund, and Income Tax. Here's a summary of how each is calculated:</p>
+        <ul>
+            <li><strong>UIF (1%):</strong> 1% of your monthly income.</li>
+            <li><strong>Pension Fund (7%):</strong> 7% of your monthly income.</li>
+            <li><strong>Income Tax:</strong> Calculated based on South Africa's tax brackets for the year.</li>
+        </ul>
+        <p>Click the button below for full details on how the calculations are done and to view examples.</p>
+
+        <!-- Button to Info Page -->
+        <button class="btn" onclick="window.location.href='info.html'">Learn More About Calculations</button>
+
+        <h2>Generate Your Payslip</h2>
+        <form id="payslipForm">
+            <div class="form-group">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your first name">
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Last Name:</label>
+                <input type="text" id="surname" name="surname" required placeholder="Enter your surname">
+            </div>
+
+            <div class="form-group">
+                <label for="annualIncome">Annual Income (R):</label>
+                <input type="text" id="annualIncome" name="annualIncome" required placeholder="Enter your annual income" oninput="formatIncome(this)" />
+            </div>
+            <button class="btn" type="button" id="generateBtn">Generate Payslip</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Payslip Generation</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column; /* Allow footer to sit at the bottom */
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #fff; /* Navbar background white */
+    color: #333; /* Text color */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure navbar is above content */
+}
+
+/* Navbar Links and Hover Effects */
+nav ul li a {
+    color: #333; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Text turns white on hover */
+    background-color: #000; /* Background turns black */
+}
+
+/* Adjust the body content to accommodate the fixed navbar */
+body {
+    padding-top: 70px; /* Create space for the fixed navbar */
+}
+
+/* Navbar Logo */
+nav .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Home Content Styles */
+.home-content {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.home-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff; /* Card background white */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Button background white */
+    color: #333; /* Text color */
+    text-decoration: none;
+    font-size: 1rem; /* Set font size to a professional level */
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center; /* Align the text properly */
+}
+
+.btn:hover {
+    background-color: #000; /* Button background turns black on hover */
+    color: #fff; /* Text turns white */
+}
+
+/* Center the buttons horizontally and limit their width */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff; /* Footer background white */
+    color: #333; /* Text color */
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+footer:hover {
+    background-color: #000; /* Footer background turns black on hover */
+    color: #fff; /* Text turns white */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-content {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust button size for smaller screens */
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Form Styles */
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #fff; /* Button background white */
+    color: #333; /* Text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #000; /* Button background turns black on hover */
+    color: #fff; /* Text turns white */
+}
+
+/* About and Contact Content Styles */
+.about-content, .contact-form {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Ensure footer does not overlap content */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Ensure footer is pushed to the bottom */
+}
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column; /* Allow footer to sit at the bottom */
+}
+
+/* Container for form */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* List styles for explanation */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ensure form inputs are aligned and spaced */
+form {
+    margin-top: 30px;
+}
+
+/* Ensure footer does not overlap content */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Ensure footer is pushed to the bottom */
+}
