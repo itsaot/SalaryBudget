@@ -43,8 +43,8 @@ document.getElementById("generateBtn").addEventListener("click", function () {
     // Generate QR code using QRCode.js
     const qrCodeCanvas = document.createElement("canvas");
 
-    // Use QRCode.toCanvas to generate the QR code
-    QRCode.toCanvas(qrCodeCanvas, "https://example.com/payslip", function (error) {
+    // Use QRCode.toCanvas to generate the QR codep
+    QRCode.toCanvas(qrCodeCanvas, "https://dolcepayslips.netlify.app/", function (error) {
         if (error) {
             console.error(error);
         } else {
