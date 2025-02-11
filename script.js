@@ -44,7 +44,7 @@ document.getElementById("generateBtn").addEventListener("click", function () {
     const qrCodeCanvas = document.createElement("canvas");
 
     // Use QRCode.toCanvas to generate the QR codep
-    QRCode.toCanvas(qrCodeCanvas, "https://dolcepayslips.netlify.app/", function (error) {
+    QRCode.toCanvas(qrCodeCanvas, "https://dolcepayslips.netlify.app", function (error) {
         if (error) {
             console.error(error);
         } else {
